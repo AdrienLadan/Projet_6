@@ -153,6 +153,7 @@ function mediasFactory(data) {
     icon.classList.add('tot-likes-icon', 'fa-solid', 'fa-heart');
 
 
+    //Gestions des fonction d'ajout ou de retrait d'un like 
 
     function increment() {
         likes.textContent++;
@@ -193,7 +194,6 @@ function mediasFactory(data) {
         p.textContent = picture._title;
         caption.append(p);
 
-        //Fonction qui gère le nombre de likes
         caption.append(heart);
         img.classList.add('thumbnail');
         img.setAttribute('src', picture._imagepath);

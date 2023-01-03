@@ -12,6 +12,8 @@ function displayModal() {
     modal.setAttribute('aria-hidden', 'false');
     modal.setAttribute('role', 'dialog');
     modal.style.display = 'flex';
+    document.getElementById('first').focus();
+
 }
 
 function closeModal() {

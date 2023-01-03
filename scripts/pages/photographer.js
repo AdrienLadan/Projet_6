@@ -22,24 +22,24 @@ function filterAction(e) {
 function filterData(type, medias) {
     const selectedFilter = document.querySelector('.selected').innerHTML = type;
     switch (type) {
-        case 'Popularité':
+    case 'Popularité':
 
-            medias.sort((a, b) => {
-                return b.likes - a.likes;
-            });
-            break;
-        case 'Date':
-            medias.sort((a, b) => {
-                return new Date(b.date) - new Date(a.date);
-            });
-            break;
-        case 'Titre':
-            medias.sort((a, b) => {
-                return a.title.localeCompare(b.title);
-            });
-            break;
-        default:
-            return medias;
+        medias.sort((a, b) => {
+            return b.likes - a.likes;
+        });
+        break;
+    case 'Date':
+        medias.sort((a, b) => {
+            return new Date(b.date) - new Date(a.date);
+        });
+        break;
+    case 'Titre':
+        medias.sort((a, b) => {
+            return a.title.localeCompare(b.title);
+        });
+        break;
+    default:
+        return medias;
     }
 
     mediaSection.innerHTML = '';
@@ -57,7 +57,6 @@ function displayData(media, section) {
     }
     section.append(mediaCardDOM);
 }
-
 
 // controls du carousel
 const next = document.querySelector('.controls-right');
